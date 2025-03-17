@@ -29,6 +29,10 @@ const songs = [
 	"Louie Louie - Ary Rumberos Arce Cumbia Fenix de Fuego",
 	"Tu tienes la culpa - Cumbia Kalle",
 	"Porque Te Vas - Grupo Nectar",
+	"Tattoo - La única tropical",
+	"Muchachita - Cumbia Brava",
+	"Otro Ocupa mi Lugar - Arce",
+	"La Cubierta Jacobo Arenas - Dj Kristian"
 ];
 
 // Keep track of songs
