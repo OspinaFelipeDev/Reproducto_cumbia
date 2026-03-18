@@ -98,19 +98,23 @@ boton.addEventListener("click", function () {
 });
 
 function playSong() {
-	// The play method is asynchronous, the setTimeout helps to avoid an error
 	setTimeout(function () {
 		audio.play();
 	}, 0);
 
 	document.getElementById("play-pause").classList.add("button-play-pause");
 	document.getElementById("play-pause").classList.remove("play-pause");
+
+	document.body.classList.add("playing"); // 👈 AQUI
 }
 
 function pauseSong() {
 	audio.pause();
+
 	document.getElementById("play-pause").classList.remove("button-play-pause");
 	document.getElementById("play-pause").classList.add("play-pause");
+
+	document.body.classList.remove("playing"); // 👈 AQUI
 }
 
 // Change song events
