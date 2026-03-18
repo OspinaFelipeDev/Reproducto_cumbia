@@ -13,14 +13,17 @@ const volume = document.getElementById("volume");
 
 // Song titles
 const songs = [
+	"Tiro Tiro - Dj Andy Palacios",
 	"Oye mujer - Fenix de Fuego",
 	"Mi corazon es un vagabundo - Arce",
+	"Ya No Queda Nada - Los Hermanos Medina",
 	"Como Te Extraño Mi Amor - Voltaje",
 	"Asi fue - Fenix de Fuego",
 	"A Escondidas - Los Hermanos Medina",
 	"Mi Dulce Amor - America Luz",
 	"Palomitas De Maiz - Cumbia Kalle",
 	"Secreto De Amor - Los Hermanos Medina",
+	"Llorando se Fue - Big Star de Colombia",
 	"Eres picaflor - Son Master",
 	"Te Amo - Néctar De Colombia",
 	"Nunca es suficiente - Los Angeles Azules",
@@ -28,12 +31,14 @@ const songs = [
 	"Mi tonto Amor - Dianey Hoyos",
 	"Amor prestado - Arce",
 	"Paloma Ajena - Agua Marina",
+	"Amigos Traigan Cerveza - Los Ronisch",
 	"Estado Civil Amantes - Los Hermanos Medina",
 	"Louie Louie - Ary Rumberos Arce Cumbia Fenix de Fuego",
 	"Tu tienes la culpa - Cumbia Kalle",
 	"Silbando En New York - Jay",
 	"Porque Te Vas - Grupo Nectar",
 	"Tattoo - La única tropical",
+	"Solo - Cumbia Kalle",
 	"Muchachita - Cumbia Brava",
 	"Otro Ocupa mi Lugar - Arce",
 	"La Cubierta Jacobo Arenas - Dj Kristian"

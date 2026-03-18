@@ -272,6 +272,7 @@ body {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  transform: translateX(3px); /* 🔥 mueve a la derecha */
 }
 
 .button-play-pause {
