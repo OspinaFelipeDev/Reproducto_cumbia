@@ -1,3 +1,4 @@
+
 :root {
   --fond: #141627;
   --fond-soft: #1f2238;
@@ -34,6 +35,7 @@ body {
   display: grid;
   grid-template-rows: 100px 300px repeat(2, auto);
   height: 100vh;
+  width: 100vw;
   background:
     radial-gradient(
       circle at center,
