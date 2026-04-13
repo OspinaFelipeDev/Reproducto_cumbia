@@ -50,8 +50,12 @@ body {
     ),
     linear-gradient(135deg, #0f1123, #1a1d35);
 
+ 
+
   overflow: hidden;
 }
+
+
 
 .header {
   display: flex;
@@ -85,11 +89,18 @@ body {
 }
 
 .title {
-  color: var(--text);
   margin-top: 3.2rem;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.5px;
+
+  background: linear-gradient(90deg, #fff, #a78bfa);
+  
+  background-clip: text; /* 🔥 importante */
+  -webkit-background-clip: text;
+
+  color: transparent; /* 🔥 reemplaza text-fill */
+  -webkit-text-fill-color: transparent;
 
   text-align: center;
   padding: 0 60px;
@@ -108,7 +119,7 @@ body {
 }
 
 .playing #cover {
-  animation: spin 15s linear infinite, glow 3s ease-in-out infinite;
+  animation: spin 10s linear infinite, glow 1.5s ease-in-out infinite;
 }
 
 @keyframes glow {
@@ -158,6 +169,8 @@ body {
 
 
 
+
+
 #cover:hover {
   transform: scale(1.03);
 }
@@ -173,17 +186,25 @@ body {
 }
 
 .playing #cover::after {
-  animation: pulseHalo 4s ease-in-out infinite;
+  animation: pulseHalo 1.5s ease-in-out infinite;
 }
 
 @keyframes pulseHalo {
-  0%, 100% {
+  0% {
     transform: scale(1);
     opacity: 0.1;
   }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.25;
+  30% {
+    transform: scale(1.25);
+    opacity: 0.3;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.1;
   }
 }
 
@@ -194,8 +215,9 @@ body {
 }
 
 .song-name {
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   display: flex;
   place-content: center;
   color: var(--text);
@@ -489,6 +511,47 @@ progress::-moz-progress-bar {
 
 .aside-container p:hover:not(.vol) {
   background-color: #0d2456;
+}
+
+/* 🔥 EQUALIZER PRO */
+.equalizer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+  height: 30px;
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+.equalizer span {
+  width: 5px;
+  height: 8px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  box-shadow: 0 0 8px var(--primary);
+}
+
+/* 🔥 SOLO ANIMA CUANDO ESTÁ REPRODUCIENDO */
+.playing .equalizer span {
+  animation: eq 0.8s infinite ease-in-out;
+}
+
+.equalizer span:nth-child(1) { animation-delay: 0s; }
+.equalizer span:nth-child(2) { animation-delay: 0.2s; }
+.equalizer span:nth-child(3) { animation-delay: 0.4s; }
+.equalizer span:nth-child(4) { animation-delay: 0.6s; }
+.equalizer span:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes eq {
+  0%, 100% {
+    height: 5px;
+    opacity: 0.5;
+  }
+  50% {
+    height: 25px;
+    opacity: 1;
+  }
 }
 
 #vol {
